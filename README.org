@@ -1,0 +1,18 @@
+* Last name:
+* First name:
+* Github username:
+
+* Instructions:
+
+Fill out the top of this form, commit and push it back to GitHub.
+
+For each week add the files related to the assignment in the correct
+folder. Folders will be specified when assignments are given.
+
+Your final project and weekly_ethicacy assignments should be added to
+their respective folders. Group work should be added to all members
+repositories.
+
+
+
+
