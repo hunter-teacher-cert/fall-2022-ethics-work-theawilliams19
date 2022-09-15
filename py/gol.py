@@ -1,4 +1,4 @@
-# FILENAME: nim.py
+# FILENAME: gol.py
 # First Last: Théa Williams
 # CSCI 77800 Fall 2022
 # collaborators: 
