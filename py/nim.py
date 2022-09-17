@@ -4,58 +4,35 @@
 # collaborators: 
 # consulted: thinkcspy text, Datacamp Intro to Python course
 
+import random
 
-import java.io.*;
-import java.util.*;
-import java.util.Random.*;
+stones = 12 #total stones at start of game
 
-public class Nim{
-
-  public static void main(String [] args){
-    int stones = 12;
-    int userStonesTaken;//stones taken by user
+#loop util game ends
+while stones > 0 : # the colon (:) lets you know your in a block or function, and you stay in it until your tab ends
+  #prompt for use input (user turn - a  move = taking 1-3 stones
+  userStonesTaken = input("Your turn, pick between 1 and 3 stones to remove.") #the input function includes print functionality, so an extra print function isn't necessary.
+  userStonesTaken = int(userStonesTaken)
   
+  #calculate number of stones remaining, print
+  stones = stones - userStonesTaken #python doesn't use the same shortcut operators as Java, e.g. -=
 
-    Scanner input = new Scanner(System.in);
-    //Include a welcome message with name       of game and object and rules.
-    
-    //loop until game ends
-    while(stones>0){
-      
-      //prompt for use input (user turn - a       move = taking 1-3 stones
-      
-      System.out.println ("Your turn, pick between 1 and 3 stones to remove.");
-      userStonesTaken = input.nextInt();
+  print("You have selected " + str(userStonesTaken)) 
+  print("There are " + str(stones) + " remaining. ")
 
-      //calculate number of stones                remaining, print
-      
-        stones -= userStonesTaken;
-       //the above is a shortcut - it is the same as - "stones = stones - userStonesTaken"
-      System.out.println ("You have selected " + userStonesTaken);
-      System.out.println ("There are " + stones + " remaining. ");
-        
-      //check for win
-      if (stones==0){
-        System.out.println ("You win!");
-        break;
-      }
+  #check for win
+  if stones <= 0:
+    print("You win!")
+    break
 
-      //machine turn
-      Random random = new Random();
-      int machineStonesTaken = random.nextInt(2)+1;
-      System.out.println("The computer has chosen " + machineStonesTaken);
-      
-      //calculate number of stones remaining,          print
-      stones -= machineStonesTaken;
-      System.out.println ("There are " + stones + " remaining. ");
-      
-      //check win
-      if (stones==0){
-        System.out.println ("Computer Wins! Sorry, better luck next time. :(");
-      }
-    }
+  #machine turn
+  machineStonesTaken = random.randrange(1,4)
+  print("The computer has chosen " + str(machineStonesTaken))
 
-    
-  }
-  
-}
+  #calculate number of stones remaining, print  
+  stones = stones - machineStonesTaken
+  print("There are " + str(stones) + " remaining. ")
+
+  #check win
+  if stones <= 0:
+    print("Computer Wins! Sorry, better luck next time. :(")

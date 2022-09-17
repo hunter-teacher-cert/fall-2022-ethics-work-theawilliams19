@@ -4,8 +4,8 @@
 # collaborators: 
 # consulted: thinkcspy text, Datacamp Intro to Python course
 
-import java.io.*;
-import java.util.*;
+import py.io.*;
+import py.util.*;
 
 public class SortSearchDriver {
     public static void main(String[] args) {
