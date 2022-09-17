@@ -102,7 +102,7 @@ def generateNextBoard(board):
   #declare and construct the next gen board (same size as the original board)
   row = len(board)
   col = len(board[0])
-  nextGenBoard = createNewBoard(rows, cols) 
+  nextGenBoard = createNewBoard(row, col) 
 
   #for loop below traverses the board
   for r in range(row):
@@ -112,7 +112,28 @@ def generateNextBoard(board):
 
     #return the next gen array
   return nextGenBoard
-    
+
+board = createNewBoard(10,10)
+
+#breathe life into some cells with selected cells:
+setCell(board, 0, 0, 'X')
+setCell(board, 0, 1, 'X')
+setCell(board, 1, 0, 'X')
+setCell(board, 3, 4, 'X')
+setCell(board, 4, 3, 'X')
+setCell(board, 3, 3, 'X')
+setCell(board, 3, 3, 'X')
+
+print("Gen X:")
+printBoard(board)
+print("--------------------------\n\n")
+
+#repeat the gen multiple times
+for i in range (10):
+  board = generateNextBoard(board)
+print("Gen X+ "+ (i+1))
+printBoard(board)
+print("--------------------------\n\n");
 
 """
   //randomly assign life to some cells
