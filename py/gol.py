@@ -7,7 +7,7 @@
 import java.io.*;
 import java.util.*;
 
-/**
+"""
  * Conway's Game of Life by Team 
  * Collaborators: Théa Williams, Ed Hawkins, Joel Bianchi
  */
@@ -214,12 +214,13 @@ public class Cgol
     //breathe life into some cells with random selection:
     randomLife (board);
     //breathe life into some cells with selected cells:
-    // setCell(board, 0, 0, 'X');
+    // setCell(board, (0, 0), 'X');
     // setCell(board, 0, 1, 'X');
     // setCell(board, 1, 0, 'X');
     // setCell(board, 3, 4, 'X');
     // setCell(board, 4, 3, 'X');
     // setCell(board, 3, 3, 'X');
+       setCell(board, (3,3), 'X')
     // TASK:
     // Once your initial version is running,
     // try out different starting configurations of living cells...
@@ -240,4 +241,4 @@ public class Cgol
 
   }//end main()
 
-}//end class
+}//end class """
