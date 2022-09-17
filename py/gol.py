@@ -2,17 +2,9 @@
 # First Last: Théa Williams
 # CSCI 77800 Fall 2022
 # collaborators: 
-# consulted: thinkcspy text, Datacamp Intro to Python course
-
-import java.io.*;
-import java.util.*;
+# consulted: thinkcspy text, Datacamp Intro to Python course, W3schools, Kate M.
 
 """
- * Conway's Game of Life by Team 
- * Collaborators: Théa Williams, Ed Hawkins, Joel Bianchi
- */
-
-/**
    The Rules of Life:
    Survivals:
    * A living cell with 2 or 3 living neighbours will survive for the next generation.
@@ -22,92 +14,57 @@ import java.util.*;
    Births:
    * Each dead cell adjacent to exactly 3 living neighbours is a birth cell. It will come alive in next generation.
    NOTA BENE:  All births and deaths occur simultaneously. Together, they constitute a single generation.
-*/
+"""
 
-public class Cgol
-{
+#create, initialize, and return  empty board (all cells dead)
+def createNewBoard(rows, cols):
+  board = [["." for c in range(cols)]for r in range(rows)]
+  return board
+  
+#print the board to the terminal
+def printBoard(board):
 
-  //create, initialize, and return  empty board (all cells dead)
-  public static char[][] createNewBoard( int rows, int cols )
-  {
-    //construct a new char 2D array
-    char[][] board = new char[rows][cols];
-
-    //traverse through the entire 2D array
-    for (int r = 0; r<board.length; r++)
-    {
-      for (int c = 0; c<board[0].length; c++)
-      {
-        //Assign a dot to the dead cells
-        board[r][c] = '.';
-      }
-    }
+  #traverse through entire array
+  for r in range(len(board)):
+    for c in range(len(board[r])):
+      
+      #print out each cell's char
+      print(board[r][c], end = " ")
     
-    //return the 2D array
-    return board;
-  }
+    #at the end of each row, put a line break
+    print()
 
+#set cell (r,c) to val
+def setCell(board, r, c, val):
+  board[r][c] = val
+#return number of living neigbours of board[r][c]
+def countNeighbours(board, row, col):
+  count = 0
+  for r in range(row-1, row + 2):
+    if r < 0: #if r cycles above top row
+      continue
+    if r >= len(board): #bottom boundary
+      break
+    for c in range(col-1, col + 2):
+      if c < 0: #left boundary
+        continue
+      if c > len(board[0]): #right boundary
+        continue
+        
+      #don't count the actual middle cell
+      if not (r == row and c == col):
 
-  //print the board to the terminal
-  public static void printBoard( char[][] board )
-  {
-    //traverse through entire array
-    for (int r = 0; r<board.length; r++)
-    {
-      for (int c = 0; c<board[0].length; c++)
-      {
-        //print out each cell's char
-        System.out.print (board[r][c]);
-      }
-      //at the end of each row, put a line break
-      System.out.println ();
-    } 
-    
-  }
+      #check if the cell is alive
+      if board[r][c] == 'X':
 
+        #increment the count
+        count = count + 1
+       
+  return count
 
-  //set cell (r,c) to val
-  public static void setCell( char[][] board, int r, int c, char val )
-  {
-    board[r][c] = val;
-    
-  }
+        
 
-
-  //return number of living neigbours of board[r][c]
-  public static int countNeighbours( char[][] board, int row, int col )
-  {
-    int count = 0;
-    for (int r = row-1; r<=row+1; r++)
-    {
-        if (r<0) //if r cycles above top row
-          continue;
-        if (r >= board.length) //bottom boundary
-          break;
-      for (int c = col-1; c<=col+1; c++)   
-      {
-        if (c <0) //left bound
-          continue;
-        if (c >= board[0].length) //right bound
-          continue;
-
-        //don't count the actual middle cell
-        if (!(r == row && c == col)){
-          //check if the cell is alive
-          if (board[r][c] == 'X')
-          {
-            //increment the count
-            count++;
-          }
-        }
-        //System.out.print(board[row][col] + " "); 
-      }
-    
-   }  
-    return count;
-  }
-
-
+"""
   /**
      precond: given a board and a cell
      postcond: return next generation cell state based on CGOL rules
