@@ -37,6 +37,7 @@ def printBoard(board):
 #set cell (r,c) to val
 def setCell(board, r, c, val):
   board[r][c] = val
+	
 #return number of living neigbours of board[r][c]
 def countNeighbours(board, row, col):
   count = 0
@@ -48,11 +49,11 @@ def countNeighbours(board, row, col):
     for c in range(col-1, col + 2):
       if c < 0: #left boundary
         continue
-      if c > len(board[0]): #right boundary
-        continue
+      if c >= len(board[0]): #right boundary
+        break
         
       #don't count the actual middle cell
-      if not (r == row and c == col):
+      if not(r == row and c == col):
 
         #check if the cell is alive
         if board[r][c] == 'X':
@@ -74,9 +75,9 @@ def getNextGenCell(board, r, c ):
   n = countNeighbours(board, r, c)
     
   #check to see if it's alive or dead
-  isAlive = false
+  isAlive = False
   if board[r][c] == 'X':
-    isAlive = true
+    isAlive = True
 
   #determine if the next gen cell is alive or dead
   #if alive --> when do we kill it?
@@ -89,7 +90,7 @@ def getNextGenCell(board, r, c ):
 
   #if it's dead --> bring to life?
   #Each dead cell adjacent to exactly 3 living neighbours is a birth cell. It will come alive in next generation.
-  if not(isAlive and n==3):
+  if not(isAlive) and n==3:
     nextGen = 'X'
 
     #keep it otherwise (see how the nextGen was initialized with default value on line 115)
@@ -129,11 +130,11 @@ printBoard(board)
 print("--------------------------\n\n")
 
 #repeat the gen multiple times
-for i in range (10):
-  board = generateNextBoard(board)
-print("Gen X+ "+ (i+1))
-printBoard(board)
-print("--------------------------\n\n");
+for i in range(10):
+	board = generateNextBoard(board)
+	print(f"Gen X {i+1}")
+	printBoard(board)
+	print("--------------------------\n\n")
 
 """
   //randomly assign life to some cells
