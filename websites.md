@@ -9,4 +9,5 @@ https://theawilliams19.github.io/fall2022_ethics_website_project/SocialJusticeWa
 https://a-ufret.github.io/fall2022_ethics_website_project/SocialJusticeWarriors.html
 
 ###Partner: Ashley Ufret
+
 Ashley's Repo: https://github.com/A-Ufret/fall2022_ethics_website_project
