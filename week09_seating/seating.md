@@ -1,4 +1,4 @@
-###Async Assignment Directions
+##Async Assignment Directions
 
 - describe how the algorithm should improve equity and also how it might affect other concerns.
 - make a note of implementation issues that might make your algorithm more practical or more difficult to implement
