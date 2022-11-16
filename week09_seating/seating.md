@@ -8,7 +8,7 @@ However, that doesn't account for families, groups or individuals that may purch
 
 Airlines currently ask when you purchase tickets if you are traveling with a child and how old that child is. It would seem that there should be a way for parents/guardians to indicate that they are a family unit at the time of the ticket purchase, whether or not tickets are purchased in the same transation.
 
-I also believe that passengers with disabilities should be able to indicate information about this at the ticket transation time. So that if these passengers need assistance, they are able to remain with the person they need assistance. 
+I also believe that passengers with disabilities should be able to indicate information about this at the ticket transation time. So that if these passengers need assistance, they are able to remain with the person they need assistance from. 
 
 In both of the above cases, maybe passengers could submit some form of documentation showing proof of relationship or need, although I am not sure what this documentation would be. 
 
