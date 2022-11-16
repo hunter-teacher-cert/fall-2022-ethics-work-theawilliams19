@@ -12,7 +12,7 @@ I also believe that passengers with disabilities should be able to indicate info
 
 In both of the above cases, maybe passengers could submit some form of documentation showing proof of relationship or need, although I am not sure what this documentation would be. 
 
-According to one of the articles posted for this week's assignment, there are very real safety concerns, for example, with regards to the evacuation of plane, in an emergency situation when families are not seating together. So it would seem that we need better regulation in the form of policy. The article stated that although legislation has been put in place, that how it would be implemented and enforced has not yet been decided, which means it has no teeth currently.
+According to one of the articles posted for this week's assignment, there are very real safety concerns, for example, with regards to the evacuation of a plane, in an emergency situation when families are not seating together. So it would seem that we need better regulation in the form of policy. The article stated that although legislation has been put in place, that how it would be implemented and enforced has not yet been decided, which means it has no teeth currently.
 
 I was shocked to learn, from reading the articles that some airlines are using passengers personal data in order to purposely split families up. This concern has definitely been a stressful one for my husband and I when we travel, since we have a small child. It is enfuriating to find out that this is being done intentionally. We now pay the extra money to have the piece of mind, but as discussed in class, this may not be an option for some families due to economic restraints. 
 
