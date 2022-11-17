@@ -10,7 +10,7 @@ import copy
 
 ############### Global Variables ###############
 seat_map = []  # two-dimensional array to hold seat information
-seat_list = manifest()  # a map of passenger names and seat locations
+seat_list = {} #manifest()  # a map of passenger names and seat locations
 waitlist = []  # holds Party elements
 max_seats = 180  # maximum number of seats on the plane providedw
 seats_filled = 0  # increases as seats are filled
@@ -183,13 +183,13 @@ def seat_party():
   return
 
 
-#create_map()
-#reserve_seat("00A", "Ashley Ufret")
-#reserve_seat("02A", "Thea Williams")
-#reserve_seat("01A", "Jerusha")
-#p = Party(["jerusha", "thea", "ashley"], 3, True)
-#concierge(["ashley", "thea", "jerusha", "guest"], False)
-#print(p)
-#print(waitlist)
-#print(seat_list)
-#display_map()
+create_map()
+reserve_seat("00A", "Ashley Ufret")
+reserve_seat("02A", "Thea Williams")
+reserve_seat("01A", "Jerusha")
+p = Party(["jerusha", "thea", "ashley"], 3, True)
+concierge(["ashley", "thea", "jerusha", "guest"], False)
+print(p)
+print(waitlist)
+print(seat_list)
+display_map()
