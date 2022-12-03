@@ -1,7 +1,7 @@
 # FILENAME: plane_seating.py
 # CSCI 77800 Fall 2022
 # Collaborators: Ashley Ufret, Jerusha Theobald,Théa Williams
-# consulted: 
+# consulted: Joshua Hans , Kate Maschmeyer (Kate also shared her initial template revision to the plane_seating.py)
 
 ############### Library Imports ###############
 import math
